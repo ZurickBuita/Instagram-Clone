@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <!-- Browser Tab Icon -->
+    <link href="assets/navbar-brand.jpg" rel="shortcut icon" type="x-icon">
+    <!-- Css link -->
+    <link href="style.css" rel="stylesheet">
+    <!-- ionicons  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body style="position: relative;">
+    <!-- navbar-header -->
+    <header class="navbar">
+        <div class="container-fluid justify-content-space-between">
+            <div class="navbar-brand">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" class="brand-img">
+            </div>
+            <form action="" class="navbar-form-search d-flex">
+                <ion-icon name="search-outline" id="search-icon"></ion-icon>
+                <input type="search" class="form-control" id="search" name="search" placeholder="Search">
+            </form>
+            <ul class="navbar-nav d-flex">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-item-icon-fill active">
+                        <ion-icon name="home"></ion-icon>
+                    </a>
+                    <a href="" class="navbar-item-icon-outline" style="display: none;">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="" class="navbar-item-icon-fill">
+                        <ion-icon name="send"></ion-icon>
+                    </a>
+                    <a href="" class="navbar-item-icon-outline">
+                        <ion-icon name="send-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#show" id="circle-dropdown">
+                        <ion-icon class="navbar-item-icon-fill circle-fill" name="add-circle"></ion-icon>
+                        <ion-icon class="navbar-item-icon-outline circle-outline" name="add-circle-outline"></ion-icon>
+                    </a>
+                    <div id="close">
+                        <div class="new-post-container" id="show">
+                            <div class="new-post">
+                                <div class="close">
+                                    <a href="#close">
+                                        <ion-icon name="close-outline"></ion-icon>
+                                    </a>
+                                </div>
+                                <div class="upload-post">
+                                    <div class="new-post-header">
+                                        <h3>Create new post</h3>
+                                    </div>
+                                    <div class="new-post-body">
+                                        <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
+                                        <h2>Drag photos and upload here</h2>
+                                        <button type="button" class="btn-upload" id="upload-btn">Select from
+                                            computer</button>
+                                        <input type="file" name="file" id="file" hidden>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="navbar-item">
+                    <a href="" class="navbar-item-icon-fill">
+                        <ion-icon name="compass"></ion-icon>
+                    </a>
+                    <a href="" class="navbar-item-icon-outline">
+                        <ion-icon name="compass-outline"></ion-icon>
+                    </a>
+                </li>
+                <li class="navbar-item">
+                    <ion-icon class="navbar-item-icon-fill heart-icon-fill" name="heart">
+                    </ion-icon>
+                    <ion-icon class="navbar-item-icon-outline heart-icon-outline" name="heart-outline"></ion-icon>
+
+                    <div class="followers-container" id="followers-container">
+                        <span></span>
+                        <h5 style="font-weight: bolder">Earlier</h5>
+                        <ul class="follower-list">
+                            <li class="follower-item">
+                                <a href="" class="follower-link">
+                                    <div style="display: flex; align-items: center;">
+                                        <div class="img-container">
+                                            <img src="./assets/user_avatar.jpg" class="img">
+                                        </div>
+                                        <span class="user-detail">
+                                            <div style="font-weight: bolder;">dreamworldart </div>&nbsp;started
+                                            following you. <large style="color:#8E8E8E;">7w</large>
+                                        </span>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <button class="btn">Following</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <div class="user-avatar dropdown">
+                        <div class="user-img-container">
+                            <div class="user-img"></div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <div class="dropdown-arrow"></div>
+                            <li class="dropdown-item">
+                                <a href="profile.html">
+                                    <ion-icon name="person-circle-outline"></ion-icon><span
+                                        class="dropdown-link">Profile</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="">
+                                    <ion-icon name="bookmark-outline"></ion-icon><span
+                                        class="dropdown-link">Saved</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="">
+                                    <ion-icon name="settings-outline"></ion-icon><span
+                                        class="dropdown-link">Settings</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="">
+                                    <ion-icon name="swap-horizontal-outline"></ion-icon><span
+                                        class="dropdown-link">Switch Accounts</span>
+                                </a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href=""><span>Log Out</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- Main content -->
+    <main class="main-content">
+        <div class="row">
+            <section class="col col1">
+                <div style="position: relative;">
+                    <ion-icon class="indicator indicator1" onclick="previousStory()" name="arrow-back-circle"></ion-icon>
+                    <ion-icon class="indicator indicator2" onclick="nextStory()" name="arrow-forward-circle"></ion-icon>
+                    <ul class="story-container">
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/92c952" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/771796" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/24f355" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/d32776" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/f66b97" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/56a8c2" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/27a49e" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/699458" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/73a23c" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/8da619" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/39cac2" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                        <li class="story-item">
+                            <a href="">
+                                <div class="story-img-container">
+                                    <img src="https://via.placeholder.com/150/976641" alt="" class="img">
+                                </div>
+                                <p class="story-user">Username</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="card-header">
+                            <div class="card-header-col">
+                                <a href="" class="img-avatar">
+                                    <img src="https://via.placeholder.com/150/e2223e" class="img">
+                                </a>
+                                <a href="" class="card-text">Username</a>
+                            </div>
+                            <div class="card-header-col">
+                                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="post-img">
+                                <img src="" class="img-post">
+                                <button class="btn-preview">&#10094;</button>
+                                <button class="btn-next">&#10095;</button>
+                            </div>
+                            <div class="react-icons">
+                                <ion-icon class="heart heart-outline" name="heart-outline"></ion-icon>
+                                <ion-icon class="heart heart-fill" name="heart">
+                                </ion-icon>
+                                <ion-icon class="comment" name="chatbubble-outline"></ion-icon>
+                                <ion-icon class="send" name="send-outline"></ion-icon>
+                                <ion-icon class="bookmark" name="bookmark-outline"></ion-icon>
+                                <ion-icon class="bookmark-clicked" name="bookmark"></ion-icon>
+                            </div>
+                            <p class="post-likes"><span class="increment-liked">3158</span> likes</p>
+                            <p class="post-views">View all 1,690 comments</p>
+                            <p class="post-date">1 day ago</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <ion-icon name="happy-outline"></ion-icon>
+                                <form action="" class="form-comment">
+                                    <input type="text" name="comment" class="comment" placeholder="Add a comment...">
+                                </form>
+                            </div>
+                            <span class="post">Post</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <div class="card-header">
+                            <div class="card-header-col">
+                                <a href="" class="img-avatar">
+                                    <img src="https://via.placeholder.com/150/3689cd" class="img">
+                                </a>
+                                <a href="" class="card-text">Username</a>
+                            </div>
+                            <div class="card-header-col">
+                                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="post-img">
+                                <img src="" class="img-post">
+                                <button class="btn-preview">&#10094;</button>
+                                <button class="btn-next">&#10095;</button>
+                            </div>
+                            <div class="react-icons">
+                                <ion-icon class="heart heart-outline" name="heart-outline"></ion-icon>
+                                <ion-icon class="heart heart-fill" name="heart">
+                                </ion-icon>
+                                <ion-icon class="comment" name="chatbubble-outline"></ion-icon>
+                                <ion-icon class="send" name="send-outline"></ion-icon>
+                                <ion-icon class="bookmark" name="bookmark-outline"></ion-icon>
+                                <ion-icon class="bookmark-clicked" name="bookmark"></ion-icon>
+                            </div>
+                            <p class="post-likes"><span class="increment-liked">300</span> likes</p>
+                            <p class="post-views">View all 1,690 comments</p>
+                            <p class="post-date">1 day ago</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <ion-icon name="happy-outline"></ion-icon>
+                                <form action="" class="form-comment">
+                                    <input type="text" name="comment" class="comment" placeholder="Add a comment...">
+                                </form>
+                            </div>
+                            <span class="post">Post</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="col col2">
+                <div class="switch-account">
+                    <div class="switch-account-col1">
+                        <a href=""><img class="img" src="./assets/user_avatar.jpg" loading="lazy" decoding="async"></a>
+                    </div>
+                    <div class="switch-account-col2"><span class="ig-name">zurickbuita</span>
+                        <div class="user-name">Zurick Buita</div>
+                    </div>
+                    <div class="switch-account-col3">Switch</div>
+                </div>
+                <div class="suggestions">
+                    <h4>Suggestions For You</h4>
+                    <a href="">See all</a>
+                </div>
+                <ul class="user-list">
+                    <li class="list-item">
+                        <div class="switch-account-col1">
+                            <a href=""><img class="img" src="https://via.placeholder.com/150/56a8c2" loading="lazy"
+                                    decoding="async"></a>
+                        </div>
+                        <div class="switch-account-col2"><span class="ig-name">Username</span>
+                            <div class="user-name">Followed by **************</div>
+                        </div>
+                        <div class="switch-account-col3">Follow</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="switch-account-col1">
+                            <a href=""><img class="img" src="https://via.placeholder.com/150/b0f7cc" loading="lazy"
+                                    decoding="async"></a>
+                        </div>
+                        <div class="switch-account-col2"><span class="ig-name">Username</span>
+                            <div class="user-name">Followed by **************</div>
+                        </div>
+                        <div class="switch-account-col3">Follow</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="switch-account-col1">
+                            <a href=""><img class="img" src="https://via.placeholder.com/150/54176f" loading="lazy"
+                                    decoding="async"></a>
+                        </div>
+                        <div class="switch-account-col2"><span class="ig-name">Username</span>
+                            <div class="user-name">Followed by **************</div>
+                        </div>
+                        <div class="switch-account-col3">Follow</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="switch-account-col1">
+                            <a href=""><img class="img" src="https://via.placeholder.com/150/51aa97" loading="lazy"
+                                    decoding="async"></a>
+                        </div>
+                        <div class="switch-account-col2"><span class="ig-name">Username</span>
+                            <div class="user-name">Followed by **************</div>
+                        </div>
+                        <div class="switch-account-col3">Follow</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="switch-account-col1">
+                            <a href=""><img class="img" src="https://via.placeholder.com/150/810b14" loading="lazy"
+                                    decoding="async"></a>
+                        </div>
+                        <div class="switch-account-col2"><span class="ig-name">Username</span>
+                            <div class="user-name">Followed by **************</div>
+                        </div>
+                        <div class="switch-account-col3">Follow</div>
+                    </li>
+                </ul>
+                <div class="footer">
+                    <a href="">About</a><span>.</span>
+                    <a href="">Help</a><span>.</span>
+                    <a href="">Press</a><span>.</span>
+                    <a href="">API</a><span>.</span>
+                    <a href="">Jobs</a><span>.</span>
+                    <a href="">Privacy</a><span>.</span>
+                    <a href="">Terms</a><span>.</span>
+                    <a href="">Location</a><span>.</span>
+                    <a href="">Language</a>
+                </div>
+                <p>© 2022 INSTAGRAM FROM META</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
